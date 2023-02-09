@@ -1,0 +1,78 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body
+{
+min-height: 100vh;
+background: #0A1919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+backround: #0A1919;
+}
+.slider
+{
+    height: 500px;
+    width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slides
+{
+    width: 550%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img
+{
+    width: 800px;
+    height: 500px;
+}
+/*CSS for manual slide navigation*/
+.navigation-manual{
+    width: 800px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 3px solid #0A1919;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s; 
+}
+.manual-btn:not(:last-child)
+{
+    margin-right: 20px;
+}
+.manual-btn:hover
+{
+    background: #0A1919;
+}
+
+#radio1:checked ~.first
+{
+    margin-left: 0;
+}
+#radio2:checked ~.first
+{
+    margin-left: -20%;
+}
+#radio3:checked ~.first
+{
+    margin-left: -40%;
+}
+#radio4:checked ~.first
+{
+    margin-left: -60%;
+}
